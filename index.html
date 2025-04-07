@@ -2,58 +2,53 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gear-Ride</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gear Ride</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; }
-    header { background: #111; color: #fff; padding: 20px; text-align: center; }
-    nav { background: #333; display: flex; justify-content: center; }
-    nav a { color: white; padding: 14px 20px; text-decoration: none; }
-    nav a:hover { background: #555; }
-    main { max-width: 900px; margin: auto; padding: 20px; background: white; }
-    section { margin-bottom: 40px; }
-    footer { background: #222; color: white; text-align: center; padding: 10px; }
-    h2 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
+    body {
+      background-color: #f4f4f4;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      margin-bottom: 40px;
+      color: #333;
+    }
+    .button-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    a.button {
+      display: block;
+      background-color: #007acc;
+      color: white;
+      padding: 20px 30px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+    }
+    a.button:hover {
+      background-color: #005f99;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Gear-Ride 
-      오토바이 정보 & 장비 소개</h1>
-  </header>
-  <nav>
-  <a href="#bike_info">오토바이 정보</a>
-  <div style="margin-left: 20px;">
-    <a href="scooter.html">- 스쿠터</a>
+  <h1>Gear Ride</h1>
+  <div class="button-container">
+    <a href="bike_info.html" class="button">오토바이 정보</a>
+    <a href="gear_review.html" class="button">장비 & 제품</a>
+    <a href="course.html" class="button">라이딩 코스</a>
+    <a href="etc.html" class="button">기타</a>
   </div>
-  <a href="#gear_review">장비 & 제품</a>
-  <a href="#blog_post">블로그 후기</a>
-</nav>
-  
-  <main>
-    <section id="bike-info">
-      <h2>🏍️ 오토바이 정보</h2>
-      <p>입문자 추천 모델, 브랜드별 특징 정보 등을 다룹니다.</p>
-    </section>
-
-    <section id="gear-review">
-  <h2>🧤 장비 & 제품 리뷰</h2>
-  <p>헬멧부터 블루투스까지, 이런 제품도 있더라고요!<br>직접 써보진 않았지만, 관심 있는 장비들을 소개해드릴게요.</p>
-</section>
-
-    <section id="routes">
-      <h2>🗺️ 라이딩 코스</h2>
-      <p>국내 추천 라이딩 코스, 바이크 카페 정보도 업데이트할 예정입니다.</p>
-    </section>
-
-   <section id="blog">
-  <h2>📝 블로그</h2>
-  <p>타보고 싶은 오토바이와 써보고 싶은 제품들에 대해 정리해두는 공간이에요.<br>라이더로서 느끼는 생각들도 함께 적어볼게요.</p>
-</section>
-    
-  </main>
-  <footer>
-    <p>&copy; 2025 라이더스 인포. All rights reserved.</p>
-  </footer>
 </body>
 </html>
+
