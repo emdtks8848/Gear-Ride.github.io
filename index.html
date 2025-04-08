@@ -1,95 +1,96 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Gear Ride</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #1c1c1c; /* 아스팔트 배경 */
-      color: white;
+      font-family: 'Arial', sans-serif;
+      background-color: #2f2f2f; /* 아스팔트 색 */
+      color: #fff;
+    }
+
+    header {
+      background-color: #1c1c1c;
+      padding: 20px;
+      text-align: left;
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
     }
 
     .container {
       display: flex;
-      height: 100vh;
-      width: 100%;
+      flex-direction: row;
+      height: 90vh;
     }
 
-    .left {
-      width: 66.6%;
-      background: url('image.png') no-repeat center center;
+    .image-area {
+      width: 66%;
+      background: url('city_track_nature.jpg') no-repeat center center;
       background-size: cover;
     }
 
-    .right {
-      width: 33.3%;
+    .button-area {
+      width: 34%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 20px;
-      background-color: #1c1c1c;
+      background-color: #2f2f2f;
     }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 40px;
-    }
-
-    .btn {
-      width: 200px;
-      padding: 15px 20px;
+    .button-area a {
+      text-decoration: none;
       margin: 10px 0;
+    }
+
+    .button-area button {
+      padding: 15px 30px;
+      font-size: 18px;
       border: none;
-      border-radius: 10px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: white;
       cursor: pointer;
-      transition: transform 0.2s ease;
+      border-radius: 8px;
+      width: 220px;
+      transition: background-color 0.3s ease;
     }
 
-    .btn:hover {
-      transform: scale(1.05);
+    .blue-button {
+      background-color: #007bff;
+      color: white;
     }
 
-    .blue {
-      background-color: #0044cc;
+    .blue-button:hover {
+      background-color: #0056b3;
     }
 
-    .dark-blue {
-      background-color: #003399;
+    .red-button {
+      background-color: #ff3c3c;
+      color: white;
     }
 
-    .red {
+    .red-button:hover {
       background-color: #cc0000;
     }
 
-    .dark-red {
-      background-color: #990000;
-    }
   </style>
 </head>
 <body>
+  <header>
+    Gear Ride
+  </header>
+
   <div class="container">
-    <div class="left"></div>
-    <div class="right">
-      <h1>Gear Ride</h1>
-      <button class="btn blue">오토바이 정보</button>
-      <button class="btn dark-blue">장비 & 제품 정보</button>
-      <button class="btn red">라이딩 코스</button>
-      <button class="btn dark-red">기타</button>
+    <div class="image-area"></div>
+
+    <div class="button-area">
+      <a href="bike.html"><button class="blue-button">오토바이 정보</button></a>
+      <a href="gear.html"><button class="blue-button">장비 & 제품 정보</button></a>
+      <a href="course.html"><button class="red-button">라이딩 코스</button></a>
+      <a href="etc.html"><button class="red-button">기타</button></a>
     </div>
   </div>
 </body>
 </html>
 
-<div class="buttons">
-  <a href="bike.html"><button class="blue-button">오토바이 정보</button></a>
-  <a href="gear.html"><button class="blue-button">장비 & 제품 정보</button></a>
-  <a href="course.html"><button class="red-button">라이딩 코스</button></a>
-  <a href="etc.html"><button class="red-button">기타</button></a>
-</div>
