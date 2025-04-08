@@ -7,69 +7,81 @@
   <style>
     body {
       margin: 0;
-      background-color: #2f2f2f; /* 아스팔트 배경 */
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1c1c1c; /* 아스팔트 배경 */
       color: white;
     }
 
-    header {
-      background-color: rgba(0, 0, 0, 0.6);
-      color: white;
-      padding: 20px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    .hero {
+    .container {
       display: flex;
       height: 100vh;
+      width: 100%;
     }
 
-    .hero img {
-      width: 66%;
-      object-fit: cover;
+    .left {
+      width: 66.6%;
+      background: url('image.png') no-repeat center center;
+      background-size: cover;
     }
 
-    .menu {
-      width: 34%;
+    .right {
+      width: 33.3%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      background-color: #1c1c1c;
     }
 
-    .menu button {
-      margin: 10px;
-      padding: 15px 30px;
-      font-size: 18px;
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      width: 200px;
+      padding: 15px 20px;
+      margin: 10px 0;
       border: none;
       border-radius: 10px;
-      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: bold;
       color: white;
-      background-color: #005fbc;
-      transition: 0.3s;
+      cursor: pointer;
+      transition: transform 0.2s ease;
     }
 
-    .menu button:hover {
-      background-color: #d00000;
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .blue {
+      background-color: #0044cc;
+    }
+
+    .dark-blue {
+      background-color: #003399;
+    }
+
+    .red {
+      background-color: #cc0000;
+    }
+
+    .dark-red {
+      background-color: #990000;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Gear Ride</h1>
-  </header>
-  <div class="hero">
-    <img src="city.jpg" alt="도시 이미지" />
-    <div class="menu">
-      <button onclick="location.href='#'">오토바이 정보</button>
-      <button onclick="location.href='#'">장비 & 제품 정보</button>
-      <button onclick="location.href='#'">라이딩 코스</button>
-      <button onclick="location.href='#'">기타</button>
+  <div class="container">
+    <div class="left"></div>
+    <div class="right">
+      <h1>Gear Ride</h1>
+      <button class="btn blue">오토바이 정보</button>
+      <button class="btn dark-blue">장비 & 제품 정보</button>
+      <button class="btn red">라이딩 코스</button>
+      <button class="btn dark-red">기타</button>
     </div>
   </div>
 </body>
