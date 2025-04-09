@@ -1,165 +1,152 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>Motorcycle Info</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motorcycle 정보</title>
   <style>
     body {
-      background: url('image.png') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 40px 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1e1e1e;
+      color: white;
     }
 
     h1 {
       text-align: center;
-      color: #fff;
       font-size: 48px;
-      margin-bottom: 60px;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      margin-top: 40px;
+      text-shadow: 2px 2px 5px black;
     }
 
     .button-container {
       display: flex;
       justify-content: center;
-      gap: 30px;
-      margin-bottom: 60px;
-      flex-wrap: wrap;
+      gap: 60px;
+      margin-top: 60px;
     }
 
-    .toggle-button {
-      padding: 30px 50px;
-      font-size: 30px;
+    .big-button {
+      font-size: 32px;
+      padding: 30px 60px;
       border: none;
-      cursor: pointer;
-      border-radius: 10px;
+      border-radius: 15px;
       color: white;
-      transition: transform 0.2s ease;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.2s;
     }
 
-    .toggle-button:hover {
+    .big-button:hover {
       transform: scale(1.05);
     }
 
-    .genre-btn {
-      background-color: #e53935; /* 빨강 */
-    }
+    .red { background-color: #d32f2f; }
+    .blue { background-color: #1976d2; }
+    .black { background-color: #333333; }
 
-    .brand-btn {
-      background-color: #1e88e5; /* 파랑 */
-    }
-
-    .cc-btn {
-      background-color: #212121; /* 검정 */
-    }
-
-    .section {
-      margin: 40px auto;
-      max-width: 800px;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 30px;
-      border-radius: 10px;
+    .list-section {
+      margin-top: 50px;
+      padding: 0 20px;
       display: none;
+      text-align: center;
     }
 
-    h2 {
+    .list-section.active {
+      display: block;
+    }
+
+    .list-section h2 {
       font-size: 32px;
-      margin-bottom: 15px;
-      color: #fff;
-    }
-
-    hr {
-      border: 1px solid #555;
+      color: #42a5f5;
       margin-bottom: 20px;
     }
 
-    ul {
-      list-style: none;
-      padding-left: 0;
-      font-size: 20px;
+    .list-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
     }
 
-    li {
-      margin-bottom: 10px;
+    .list-buttons a {
+      background-color: #424242;
+      color: white;
+      padding: 20px 40px;
+      font-size: 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .list-buttons a:hover {
+      background-color: #616161;
     }
   </style>
 </head>
 <body>
-
-  <h1>Motorcycle</h1>
+  <h1>Motorcycle 정보</h1>
 
   <div class="button-container">
-    <button class="toggle-button genre-btn" onclick="toggleSection('genre')">Genre</button>
-    <button class="toggle-button brand-btn" onclick="toggleSection('brand')">Brand</button>
-    <button class="toggle-button cc-btn" onclick="toggleSection('cc')">CC</button>
+    <button class="big-button red" onclick="showSection('genre')">장르</button>
+    <button class="big-button blue" onclick="showSection('brand')">브랜드</button>
+    <button class="big-button black" onclick="showSection('cc')">배기량</button>
   </div>
 
   <!-- 장르 -->
-  <div id="genre" class="section">
-    <h2>1. Genre</h2>
-    <hr>
-    <ul>
-      <li>Sports</li>
-      <li>Touring</li>
-      <li>Cruiser</li>
-      <li>Naked</li>
-      <li>Scooter</li>
-      <li>Enduro</li>
-      <li>Dualpurpose</li>
-    </ul>
+  <div id="genre" class="list-section">
+    <h2>1. Genre (장르)</h2>
+    <div class="list-buttons">
+      <a href="genre/sports.html">Sports</a>
+      <a href="genre/touring.html">Touring</a>
+      <a href="genre/cruiser.html">Cruiser</a>
+      <a href="genre/naked.html">Naked</a>
+      <a href="genre/scooter.html">Scooter</a>
+      <a href="genre/enduro.html">Enduro</a>
+      <a href="genre/dualpurpose.html">Dualpurpose</a>
+    </div>
   </div>
 
   <!-- 브랜드 -->
-  <div id="brand" class="section">
-    <h2>2. Brand</h2>
-    <hr>
-    <ul>
-      <li>Honda</li>
-      <li>Yamaha</li>
-      <li>Kawasaki</li>
-      <li>Suzuki</li>
-      <li>BMW</li>
-      <li>Ducati</li>
-      <li>KTM</li>
-      <li>Harley-Davidson</li>
-      <li>Indian</li>
-      <li>Triumph</li>
-      <li>MV Agusta</li>
-      <li>Vespa</li>
-    </ul>
+  <div id="brand" class="list-section">
+    <h2>2. Brand (브랜드)</h2>
+    <div class="list-buttons">
+      <a href="brand/honda.html">Honda (혼다)</a>
+      <a href="brand/yamaha.html">Yamaha (야마하)</a>
+      <a href="brand/kawasaki.html">Kawasaki (가와사키)</a>
+      <a href="brand/suzuki.html">Suzuki (스즈키)</a>
+      <a href="brand/bmw.html">BMW</a>
+      <a href="brand/ducati.html">Ducati (두카티)</a>
+      <a href="brand/ktm.html">KTM</a>
+      <a href="brand/harley.html">Harley-Davidson (할리)</a>
+      <a href="brand/indian.html">Indian (인디언)</a>
+      <a href="brand/triumph.html">Triumph (트라이엄프)</a>
+      <a href="brand/mvagusta.html">MV Agusta (MV아구스타)</a>
+      <a href="brand/vespa.html">Vespa (베스파)</a>
+    </div>
   </div>
 
   <!-- 배기량 -->
-  <div id="cc" class="section">
-    <h2>3. CC </h2>
-    <hr>
-    <ul>
-      <li>125cc 이하</li>
-      <li>126cc ~ 250cc</li>
-      <li>251cc ~ 500cc</li>
-      <li>501cc ~ 750cc</li>
-      <li>751cc ~ 1000cc</li>
-      <li>1001cc 이상</li>
-    </ul>
+  <div id="cc" class="list-section">
+    <h2>3. 배기량 (cc)</h2>
+    <div class="list-buttons">
+      <a href="cc/125cc.html">125cc 이하</a>
+      <a href="cc/126-250cc.html">126~250cc</a>
+      <a href="cc/251-500cc.html">251~500cc</a>
+      <a href="cc/501-750cc.html">501~750cc</a>
+      <a href="cc/751-1000cc.html">751~1000cc</a>
+      <a href="cc/1000cc-over.html">1000cc 이상</a>
+    </div>
   </div>
 
   <script>
-    function toggleSection(sectionId) {
-      const sections = ['genre', 'brand', 'cc'];
-      sections.forEach(id => {
-        const section = document.getElementById(id);
-        if (id === sectionId) {
-          section.style.display = section.style.display === 'block' ? 'none' : 'block';
-        } else {
-          section.style.display = 'none';
-        }
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.list-section');
+      sections.forEach(section => {
+        section.classList.remove('active');
       });
+      document.getElementById(sectionId).classList.add('active');
     }
   </script>
-
 </body>
 </html>
-
