@@ -5,62 +5,85 @@
   <title>Motorcycle Info</title>
   <style>
     body {
-      background-color: #111;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: white;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 20px;
+      padding: 40px 20px;
     }
 
     h1 {
       text-align: center;
       color: #fff;
-      margin-bottom: 40px;
+      font-size: 48px;
+      margin-bottom: 60px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
     }
 
     .button-container {
       display: flex;
       justify-content: center;
-      gap: 10px;
-      margin-bottom: 30px;
+      gap: 30px;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
     }
 
     .toggle-button {
-      padding: 10px 20px;
+      padding: 30px 50px;
+      font-size: 30px;
       border: none;
       cursor: pointer;
-      border-radius: 5px;
-      font-size: 16px;
-      color: #fff;
-      transition: 0.2s ease;
+      border-radius: 10px;
+      color: white;
+      transition: transform 0.2s ease;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
     }
 
-    .genre-btn { background-color: #007bff; }
-    .brand-btn { background-color: #ff5722; }
-    .cc-btn { background-color: #d32f2f; }
+    .toggle-button:hover {
+      transform: scale(1.05);
+    }
+
+    .genre-btn {
+      background-color: #e53935; /* 빨강 */
+    }
+
+    .brand-btn {
+      background-color: #1e88e5; /* 파랑 */
+    }
+
+    .cc-btn {
+      background-color: #212121; /* 검정 */
+    }
 
     .section {
-      margin-bottom: 30px;
+      margin: 40px auto;
+      max-width: 800px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 10px;
       display: none;
     }
 
     h2 {
-      color: #007bff;
+      font-size: 32px;
+      margin-bottom: 15px;
+      color: #fff;
     }
 
     hr {
-      border: 1px solid #444;
+      border: 1px solid #555;
+      margin-bottom: 20px;
     }
 
     ul {
       list-style: none;
       padding-left: 0;
-      margin-top: 10px;
+      font-size: 20px;
     }
 
     li {
-      margin-bottom: 8px;
-      font-size: 1.1em;
+      margin-bottom: 10px;
     }
   </style>
 </head>
@@ -94,18 +117,18 @@
     <h2>2. Brand</h2>
     <hr>
     <ul>
-      <li>Honda (혼다)</li>
-      <li>Yamaha (야마하)</li>
-      <li>Kawasaki (가와사키)</li>
-      <li>Suzuki (스즈키)</li>
+      <li>Honda</li>
+      <li>Yamaha</li>
+      <li>Kawasaki</li>
+      <li>Suzuki</li>
       <li>BMW</li>
-      <li>Ducati (두카티)</li>
+      <li>Ducati</li>
       <li>KTM</li>
-      <li>Harley-Davidson (할리)</li>
-      <li>Indian (인디언)</li>
-      <li>Triumph (트라이엄프)</li>
-      <li>MVagusta (MV아구스타)</li>
-      <li>Vespa (베스파)</li>
+      <li>Harley-Davidson</li>
+      <li>Indian</li>
+      <li>Triumph</li>
+      <li>MV Agusta</li>
+      <li>Vespa</li>
     </ul>
   </div>
 
@@ -131,7 +154,7 @@
         if (id === sectionId) {
           section.style.display = section.style.display === 'block' ? 'none' : 'block';
         } else {
-          section.style.display = 'none'; // 다른 섹션은 닫기
+          section.style.display = 'none';
         }
       });
     }
@@ -139,3 +162,4 @@
 
 </body>
 </html>
+
