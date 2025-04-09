@@ -1,116 +1,99 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Motorcycle</title>
   <style>
     body {
       margin: 0;
+      padding: 0;
+      background: url('../images/image.png') no-repeat center center fixed;
+      background-size: cover;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #1e1e1e;
       color: white;
+    }
+
+    .container {
+      text-align: center;
+      padding-top: 100px;
     }
 
     h1 {
-      text-align: center;
       font-size: 48px;
-      margin-top: 40px;
+      font-weight: bold;
       text-shadow: 2px 2px 5px black;
     }
 
-    .button-container {
-      display: flex;
-      justify-content: center;
-      gap: 60px;
-      margin-top: 60px;
+    .main-buttons {
+      margin-top: 50px;
     }
 
-    .big-button {
-      font-size: 32px;
+    .main-buttons button {
+      font-size: 24px;
       padding: 30px 60px;
+      margin: 20px;
       border: none;
       border-radius: 15px;
       color: white;
+      font-weight: bold;
       cursor: pointer;
-      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-      transition: transform 0.2s;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.2s ease;
     }
 
-    .big-button:hover {
+    .main-buttons button:hover {
       transform: scale(1.05);
     }
 
-    .red { background-color: #d32f2f; }
-    .blue { background-color: #1976d2; }
-    .black { background-color: #333333; }
+    .red { background-color: #e53935; }
+    .blue { background-color: #1e88e5; }
+    .black { background-color: #212121; }
 
-    .list-section {
-      margin-top: 50px;
-      padding: 0 20px;
+    .sub-buttons {
+      margin-top: 30px;
       display: none;
-      text-align: center;
-    }
-
-    .list-section.active {
-      display: block;
-    }
-
-    .list-section h2 {
-      font-size: 32px;
-      color: #42a5f5;
-      margin-bottom: 20px;
-    }
-
-    .list-buttons {
-      display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
     }
 
-    .list-buttons a {
-      background-color: #424242;
+    .sub-buttons a {
+      background-color: rgba(0, 0, 0, 0.7);
       color: white;
+      margin: 10px;
       padding: 20px 40px;
-      font-size: 20px;
       border-radius: 10px;
       text-decoration: none;
-      transition: background-color 0.3s;
+      font-size: 20px;
+      transition: background-color 0.3s ease;
     }
 
-    .list-buttons a:hover {
-      background-color: #616161;
+    .sub-buttons a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
     }
   </style>
 </head>
 <body>
-  <h1>Motorcycle</h1>
+  <div class="container">
+    <h1>Motorcycle</h1>
 
-  <div class="button-container">
-    <button class="big-button red" onclick="showSection('genre')">Genre</button>
-    <button class="big-button blue" onclick="showSection('brand')">Brand</button>
-    <button class="big-button black" onclick="showSection('cc')">CC</button>
-  </div>
+    <div class="main-buttons">
+      <button class="red" onclick="toggleMenu('genre')">Genre</button>
+      <button class="blue" onclick="toggleMenu('brand')">Brand</button>
+      <button class="black" onclick="toggleMenu('cc')"> CC </button>
+    </div>
 
-  <!-- 장르 -->
-  <div id="genre" class="list-section">
-    <h2>1. Genre </h2>
-    <div class="list-buttons">
-      <a href="genre/sports.html">Sports</a>
+    <div id="genre" class="sub-buttons">
+      <a href="genre/sport.html">Sport</a>
+      <a href="genre/naked.html">Naked</a>
+      <a href="genre/adventure.html">Adventure</a>
       <a href="genre/touring.html">Touring</a>
       <a href="genre/cruiser.html">Cruiser</a>
-      <a href="genre/naked.html">Naked</a>
-      <a href="genre/scooter.html">Scooter</a>
-      <a href="genre/enduro.html">Enduro</a>
-      <a href="genre/dualpurpose.html">Dualpurpose</a>
+      <a href="genre/classic.html">Classic</a>
+      <a href="genre/classic.html">Enduro</a>
+      <a href="genre/classic.html">Dualpurpose</a>
     </div>
-  </div>
 
-  <!-- 브랜드 -->
-  <div id="brand" class="list-section">
-    <h2>2. Brand </h2>
-    <div class="list-buttons">
+     <div class="list-buttons">
       <a href="brand/honda.html">Honda (혼다)</a>
       <a href="brand/yamaha.html">Yamaha (야마하)</a>
       <a href="brand/kawasaki.html">Kawasaki (가와사키)</a>
@@ -124,27 +107,28 @@
       <a href="brand/mvagusta.html">MV Agusta (MV아구스타)</a>
       <a href="brand/vespa.html">Vespa (베스파)</a>
     </div>
-  </div>
 
-  <!-- 배기량 -->
-  <div id="cc" class="list-section">
-    <h2>3. CC </h2>
-    <div class="list-buttons">
-      <a href="cc/125cc.html">125cc 이하</a>
-      <a href="cc/126-250cc.html">126~250cc</a>
-      <a href="cc/251-500cc.html">251~500cc</a>
-      <a href="cc/501-750cc.html">501~750cc</a>
-      <a href="cc/751-1000cc.html">751~1000cc</a>
-      <a href="cc/1000cc-over.html">1000cc 이상</a>
+    <div id="cc" class="sub-buttons">
+      <a href="cc/125.html">125cc 이하</a>
+      <a href="cc/250.html">126~250cc</a>
+      <a href="cc/400.html">251~400cc</a>
+      <a href="cc/750.html">401~750cc</a>
+      <a href="cc/1000.html">751~1000cc</a>
+      <a href="cc/1000plus.html">1000cc 이상</a>
     </div>
   </div>
 
   <script>
-    function showSection(sectionId) {
-      const sections = document.querySelectorAll('.list-section');
-      sections.forEach(section => {
-        section.classList.remove('active');
+    function toggleMenu(menuId) {
+      const sections = ['genre', 'brand', 'cc'];
+      sections.forEach(id => {
+        document.getElementById(id).style.display = (id === menuId && document.getElementById(id).style.display !== 'flex') ? 'flex' : 'none';
       });
+    }
+  </script>
+</body>
+</html>
+
       document.getElementById(sectionId).classList.add('active');
     }
   </script>
