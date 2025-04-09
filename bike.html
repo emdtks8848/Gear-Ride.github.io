@@ -11,64 +11,131 @@
       margin: 0;
       padding: 20px;
     }
+
+    h1 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 40px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .toggle-button {
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #fff;
+      transition: 0.2s ease;
+    }
+
+    .genre-btn { background-color: #007bff; }
+    .brand-btn { background-color: #ff5722; }
+    .cc-btn { background-color: #d32f2f; }
+
+    .section {
+      margin-bottom: 30px;
+      display: none;
+    }
+
     h2 {
       color: #007bff;
     }
+
     hr {
       border: 1px solid #444;
     }
+
     ul {
       list-style: none;
       padding-left: 0;
-      margin-bottom: 30px;
+      margin-top: 10px;
     }
+
     li {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       font-size: 1.1em;
     }
   </style>
 </head>
 <body>
 
-  <h2>1. Genre(장르)</h2>
-  <hr>
-  <ul>
-    <li>Sports</li>
-    <li>Touring</li>
-    <li>Cruiser</li>
-    <li>Naked</li>
-    <li>Scooter</li>
-    <li>Enduro</li>
-    <li>Dualpurpose</li>
-  </ul>
+  <h1>Motorcycle 정보</h1>
 
-  <h2>2. Brand</h2>
-  <hr>
-  <ul>
-    <li>Honda (혼다)</li>
-    <li>Yamaha (야마하)</li>
-    <li>Kawasaki (가와사키)</li>
-    <li>Suzuki (스즈키)</li>
-    <li>BMW</li>
-    <li>Ducati (두카티)</li>
-    <li>KTM</li>
-    <li>Harley-Davidson (할리)</li>
-    <li>Indian (인디언)</li>
-    <li>Triumph (트라이엄프)</li>
-    <li>MVagusta (MV아구스타)</li>
-    <li>Vespa (베스파)</li>
-  </ul>
+  <div class="button-container">
+    <button class="toggle-button genre-btn" onclick="toggleSection('genre')">장르</button>
+    <button class="toggle-button brand-btn" onclick="toggleSection('brand')">브랜드</button>
+    <button class="toggle-button cc-btn" onclick="toggleSection('cc')">배기량</button>
+  </div>
 
-  <h2>3. Displacement(배기량)</h2>
-  <hr>
-  <ul>
-    <li>125cc 이하</li>
-    <li>126cc ~ 250cc</li>
-    <li>251cc ~ 500cc</li>
-    <li>501cc ~ 750cc</li>
-    <li>751cc ~ 1000cc</li>
-    <li>1001cc 이상</li>
-  </ul>
+  <!-- 장르 -->
+  <div id="genre" class="section">
+    <h2>1. Genre(장르)</h2>
+    <hr>
+    <ul>
+      <li>Sports</li>
+      <li>Touring</li>
+      <li>Cruiser</li>
+      <li>Naked</li>
+      <li>Scooter</li>
+      <li>Enduro</li>
+      <li>Dualpurpose</li>
+    </ul>
+  </div>
+
+  <!-- 브랜드 -->
+  <div id="brand" class="section">
+    <h2>2. Brand</h2>
+    <hr>
+    <ul>
+      <li>Honda (혼다)</li>
+      <li>Yamaha (야마하)</li>
+      <li>Kawasaki (가와사키)</li>
+      <li>Suzuki (스즈키)</li>
+      <li>BMW</li>
+      <li>Ducati (두카티)</li>
+      <li>KTM</li>
+      <li>Harley-Davidson (할리)</li>
+      <li>Indian (인디언)</li>
+      <li>Triumph (트라이엄프)</li>
+      <li>MVagusta (MV아구스타)</li>
+      <li>Vespa (베스파)</li>
+    </ul>
+  </div>
+
+  <!-- 배기량 -->
+  <div id="cc" class="section">
+    <h2>3. Displacement(배기량)</h2>
+    <hr>
+    <ul>
+      <li>125cc 이하</li>
+      <li>126cc ~ 250cc</li>
+      <li>251cc ~ 500cc</li>
+      <li>501cc ~ 750cc</li>
+      <li>751cc ~ 1000cc</li>
+      <li>1001cc 이상</li>
+    </ul>
+  </div>
+
+  <script>
+    function toggleSection(sectionId) {
+      const sections = ['genre', 'brand', 'cc'];
+      sections.forEach(id => {
+        const section = document.getElementById(id);
+        if (id === sectionId) {
+          section.style.display = section.style.display === 'block' ? 'none' : 'block';
+        } else {
+          section.style.display = 'none'; // 다른 섹션은 닫기
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
