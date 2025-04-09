@@ -23,7 +23,7 @@
 
     .left {
       flex: 1;
-      background-image: url('images/image.png');
+      background-image: url('images/image.png'); /* 이미지 경로 수정됨 */
       background-size: cover;
       background-position: center;
     }
@@ -39,10 +39,19 @@
       padding: 40px;
     }
 
-    .title {
+    .title-btn {
       font-size: 48px;
       font-weight: bold;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
       margin-bottom: 60px;
+      text-decoration: underline;
+    }
+
+    .title-btn:hover {
+      color: #2196f3;
     }
 
     .btn {
@@ -86,7 +95,9 @@
   <div class="container">
     <div class="left"></div>
     <div class="right">
-      <div class="title">Gear Ride</div>
+      <a href="index.html">
+        <button class="title-btn">Gear Ride</button>
+      </a>
       <a href="pages/bike.html"><button class="btn btn-blue">Motorcycle</button></a>
       <a href="pages/gear.html"><button class="btn btn-blue">Motorcycle Gear</button></a>
       <a href="pages/course.html"><button class="btn btn-orange">Riding Course</button></a>
@@ -95,4 +106,3 @@
   </div>
 </body>
 </html>
-
