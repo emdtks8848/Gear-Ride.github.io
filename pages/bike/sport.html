@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Sport Bikes</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
       background-color: #2e2e2e;
       color: white;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
     .site-title {
@@ -40,7 +40,7 @@
     .bike-list {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-between;
       gap: 30px;
     }
 
@@ -49,13 +49,19 @@
       padding: 15px;
       border-radius: 10px;
       text-align: center;
-      width: 250px;
+      width: 30%;
       box-shadow: 2px 4px 10px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
+    }
+
+    .bike-item:hover {
+      transform: scale(1.03);
     }
 
     .bike-item img {
       width: 100%;
       border-radius: 8px;
+      cursor: pointer;
     }
 
     .bike-name {
@@ -63,36 +69,42 @@
       font-size: 18px;
       font-weight: bold;
     }
+
+    .bike-price {
+      font-size: 16px;
+      color: #ccc;
+    }
   </style>
 </head>
 <body>
 
-  <!-- 메인 페이지로 돌아가는 링크 -->
   <a href="../../index.html" class="site-title">Gear Ride</a>
 
   <div class="container">
     <h1>Sport Bikes</h1>
     <div class="bike-list">
       <div class="bike-item">
-        <img src="../../images/sport/r1.jpg" alt="Yamaha YZF-R1">
-        <div class="bike-name">Yamaha YZF-R1</div>
+        <a href="sport/r1.html">
+          <img src="../../images/sport/r1.jpg" alt="Yamaha YZF-R1">
+          <div class="bike-name">Yamaha YZF-R1</div>
+          <div class="bike-price">약 2,300만원</div>
+        </a>
       </div>
       <div class="bike-item">
-        <img src="../../images/sport/cbr1000rr.jpg" alt="Honda CBR1000RR">
-        <div class="bike-name">Honda CBR1000RR</div>
+        <a href="sport/cbr1000rr.html">
+          <img src="../../images/sport/cbr1000rr.jpg" alt="Honda CBR1000RR">
+          <div class="bike-name">Honda CBR1000RR</div>
+          <div class="bike-price">약 2,000만원</div>
+        </a>
       </div>
       <div class="bike-item">
-        <img src="../../images/sport/s1000rr.jpg" alt="BMW S1000RR">
-        <div class="bike-name">BMW S1000RR</div>
+        <a href="sport/s1000rr.html">
+          <img src="../../images/sport/s1000rr.jpg" alt="BMW S1000RR">
+          <div class="bike-name">BMW S1000RR</div>
+          <div class="bike-price">약 2,500만원</div>
+        </a>
       </div>
-      <div class="bike-item">
-        <img src="../../images/sport/gsxr1000.jpg" alt="Suzuki GSX-R1000">
-        <div class="bike-name">Suzuki GSX-R1000</div>
-      </div>
-      <div class="bike-item">
-        <img src="../../images/sport/panigale.jpg" alt="Ducati Panigale V4">
-        <div class="bike-name">Ducati Panigale V4</div>
-      </div>
+      <!-- 필요시 더 추가 가능 -->
     </div>
   </div>
 
