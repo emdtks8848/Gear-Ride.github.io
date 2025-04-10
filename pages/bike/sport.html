@@ -1,84 +1,100 @@
-<!-- pages/bike/sport.html -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>Sport Bikes - Gear Ride</title>
+  <meta charset="UTF-8" />
+  <title>Sport Bikes</title>
   <style>
     body {
+      margin: 0;
+      padding: 0;
       background-color: #2e2e2e;
       color: white;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 20px;
     }
 
-    a.home {
-      display: inline-block;
-      margin-bottom: 20px;
-      color: #1e88e5;
+    .site-title {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 20px;
       font-weight: bold;
+      background-color: #1e88e5;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
       text-decoration: none;
     }
 
+    .container {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 20px;
+    }
+
     h1 {
-      font-size: 36px;
-      margin-bottom: 30px;
-    }
-
-    .bike-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .bike-card {
-      background-color: #3a3a3a;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-      transition: transform 0.2s ease;
-    }
-
-    .bike-card:hover {
-      transform: scale(1.03);
-    }
-
-    .bike-card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-    }
-
-    .bike-card .name {
-      padding: 15px;
-      font-size: 18px;
       text-align: center;
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+
+    .bike-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .bike-item {
+      background-color: #3a3a3a;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      width: 250px;
+      box-shadow: 2px 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .bike-item img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .bike-name {
+      margin-top: 10px;
+      font-size: 18px;
       font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <a class="home" href="../../index.html">← 홈으로</a>
-  <h1>Sport Bikes</h1>
 
-  <div class="bike-grid">
-    <div class="bike-card">
-      <img src="https://cdn.pixabay.com/photo/2018/06/20/22/24/motorcycle-3483452_960_720.jpg" alt="Yamaha R1">
-      <div class="name">Yamaha YZF-R1</div>
-    </div>
-    <div class="bike-card">
-      <img src="https://cdn.pixabay.com/photo/2020/06/30/21/56/kawasaki-5356443_960_720.jpg" alt="Kawasaki ZX-10R">
-      <div class="name">Kawasaki Ninja ZX-10R</div>
-    </div>
-    <div class="bike-card">
-      <img src="https://cdn.pixabay.com/photo/2017/01/18/15/01/honda-1998055_960_720.jpg" alt="Honda CBR1000RR">
-      <div class="name">Honda CBR1000RR-R</div>
-    </div>
-    <div class="bike-card">
-      <img src="https://cdn.pixabay.com/photo/2017/02/17/22/39/motorbike-2074478_960_720.jpg" alt="Suzuki GSX-R1000">
-      <div class="name">Suzuki GSX-R1000</div>
+  <a href="../../index.html" class="site-title">Gear Ride</a>
+
+  <div class="container">
+    <h1>Sport Bikes</h1>
+    <div class="bike-list">
+      <div class="bike-item">
+        <img src="../../images/sport/r1.jpg" alt="Yamaha YZF-R1">
+        <div class="bike-name">Yamaha YZF-R1</div>
+      </div>
+      <div class="bike-item">
+        <img src="../../images/sport/cbr1000rr.jpg" alt="Honda CBR1000RR">
+        <div class="bike-name">Honda CBR1000RR</div>
+      </div>
+      <div class="bike-item">
+        <img src="../../images/sport/s1000rr.jpg" alt="BMW S1000RR">
+        <div class="bike-name">BMW S1000RR</div>
+      </div>
+      <div class="bike-item">
+        <img src="../../images/sport/gsxr1000.jpg" alt="Suzuki GSX-R1000">
+        <div class="bike-name">Suzuki GSX-R1000</div>
+      </div>
+      <div class="bike-item">
+        <img src="../../images/sport/panigale.jpg" alt="Ducati Panigale V4">
+        <div class="bike-name">Ducati Panigale V4</div>
+      </div>
     </div>
   </div>
+
 </body>
 </html>
+
